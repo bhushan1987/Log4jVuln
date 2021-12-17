@@ -1,0 +1,55 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.test:Log4jVuln:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 58, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Log4jVuln 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ Log4jVuln ---
+[INFO] org.test:Log4jVuln:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework:spring-web:jar:5.3.13:compile
+[INFO] |  +- org.springframework:spring-beans:jar:5.3.13:compile
+[INFO] |  \- org.springframework:spring-core:jar:5.3.13:compile
+[INFO] |     \- org.springframework:spring-jcl:jar:5.3.13:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.6.1:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.6.1:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.6.1:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.7:compile
+[INFO] |  |  |  |  +- ch.qos.logback:logback-core:jar:1.2.7:compile
+[INFO] |  |  |  |  \- org.slf4j:slf4j-api:jar:1.7.32:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.32:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.29:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:2.6.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.0:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.0:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.13.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.0:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.6.1:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.55:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.55:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.55:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:5.3.13:compile
+[INFO] |     +- org.springframework:spring-aop:jar:5.3.13:compile
+[INFO] |     \- org.springframework:spring-expression:jar:5.3.13:compile
+[INFO] +- org.apache.logging.log4j:log4j-core:jar:2.14.1:compile
+[INFO] |  \- org.apache.logging.log4j:log4j-api:jar:2.14.1:compile
+[INFO] +- org.springframework.boot:spring-boot:jar:2.5.1:compile
+[INFO] |  \- org.springframework:spring-context:jar:5.3.8:compile
+[INFO] \- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.920 s
+[INFO] Finished at: 2021-12-17T13:46:53+05:30
+[INFO] Final Memory: 11M/44M
+[INFO] ------------------------------------------------------------------------
