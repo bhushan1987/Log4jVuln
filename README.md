@@ -15,10 +15,15 @@ Request will look like - http://localhost:8080/logme?input=${jndi:ldap://localho
 <br>You will notice that the logger tries to contact this jndi endpoint. As this is a fake endpoint, it fails to connect and prints the exception trace on spring app console.
 
 **No Burp Collaborator needed**<br>
-Furthermore, I've now added a server socket, which listens on port 339. Once you start the Spring Boot app, please also start this socket program.
-<br>Now invoke the URL from the browser as follows (please encode the param value before invoking):
-*http://localhost:8080/logme?input=${jndi:ldap://localhost:339}*
+Furthermore, I've now added a server socket, which listens on port 339.<br>
+You want to test your existing deployments for log4j vulnerabilities. One way is to examine the application logs, may be using splunk, to see for any unexpected logging.
+Other way is to pass the host:port provided by Burp Collaborator, and poll the collaborator to know if log4j inside the application has invoked Collaborator endpoints.
+<br>Log4j basically uses client socket and contacts the <host:port> provided in the payload. <br>
+Once you start the socket on local, now invoke the application URL from the browser as follows (please encode the param value before invoking):
+*http://<application_hostname:port>/logme?input=${jndi:ldap://<socket_ip:port>}*
 <br>
+Note: If your application is deployed in cloud, ensure your socket IP is accessible to the internet. You may need to deploy the socket in cloud such as on EC2 instance.<br>
+But this should work on all local/inside VPN deployments.
 Once the above endpoint is invoked, you will see that the server socket received an incoming connection.<br>
 Congratulations! You have successfully exploited the application.
 
