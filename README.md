@@ -2,7 +2,7 @@
 This is a basic Spring Boot app which demonstrate the Log4j vulnerability.
 While testing different endpoints of your application, you might need Burp Collaborator (which comes in a professional edition only).
 <br>
-This program uses plane socket to ensure that the your application hit the provided malicious endpoint!
+This program uses plain socket to ensure that the your application hit the provided malicious endpoint!
 
 **About Log4j Issue**
 <br>The world knows that there is a security vulnerability in log4j versions 2.10 to 2.14.1 (Also, the patches they released also have many vulnerabilities, so please check the apache site for exact versions).
